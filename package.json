@@ -2,7 +2,7 @@
   "name": "infinite-gallery-v0",
   "version": "0.1.0",
   "private": true,
-  "type": "module", 
+  "type": "module",
   "scripts": {
     "build": "next build --turbopack",
     "dev": "next dev --turbopack",
@@ -30,6 +30,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@types/three": "^0.183.1",
     "postcss": "^8.5",
     "tailwindcss": "^4",
     "typescript": "^5"
@@ -41,6 +42,5 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "type": "module"
+  "license": "ISC"
 }
