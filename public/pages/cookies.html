@@ -1,0 +1,166 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GAGAGAZPACHO</title>
+  <link rel="icon" type="image/webp" href="../images/logo2.webp">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<!-- CABECERA -->
+<header class="header">
+  <div class="container header-flex">
+    <nav class="nav" id="main-nav">
+      <div class="nav-links">
+        <a href="main.html">INICIO</a>
+        <a href="http://localhost:3000">OBRAS RECIENTES</a>
+        <img src="../images/logo2.webp" alt="Logo GAGAZPACHO" class="center-logo">
+        <a href="who.html">QUIÉN</a>
+        <a href="http://localhost:3000/shop">TIENDA</a>
+        <a href="/cart" class="cart-link">CARRITO <span class="cart-count" aria-live="polite">0</span></a>
+      </div>
+    </nav>
+    <button class="nav-toggle" type="button" aria-controls="main-nav" aria-expanded="false" aria-label="Abrir menú">
+      <img src="../images/logo2.webp" alt="Menú">
+    </button>
+  </div>
+</header>
+<div class="nav-backdrop" id="nav-backdrop" aria-hidden="true"></div>
+
+<!-- LEGAL PAGE CONTENT -->
+<section class="legal-page">
+  <div class="legal-container">
+    <h1>Política de Cookies</h1>
+    <p class="legal-updated">Última actualización: 3 de febrero de 2026</p>
+
+    <h2>¿Qué son las cookies?</h2>
+    <p>Las cookies son pequeños archivos de texto que se colocan en su ordenador o dispositivo móvil cuando visita un sitio web. Se utilizan ampliamente para que los sitios web funcionen de manera más eficiente y para proporcionar información a los propietarios del sitio.</p>
+
+    <h2>Cómo usamos las cookies</h2>
+    <p>GAGAGAZPACHO utiliza cookies para mejorar su experiencia de navegación y nuestros servicios. Usamos los siguientes tipos de cookies:</p>
+
+    <h3>Cookies esenciales</h3>
+    <p>Estas cookies son necesarias para que el sitio web funcione correctamente. Permiten funcionalidades básicas como la seguridad, la gestión de la red y la accesibilidad. No puede desactivar estas cookies.</p>
+    <ul>
+      <li><strong>Sesión del carrito:</strong> Recuerda los artículos en su carrito de compras</li>
+      <li><strong>Consentimiento de cookies:</strong> Almacena sus preferencias de cookies</li>
+    </ul>
+
+    <h3>Cookies de análisis</h3>
+    <p>Estas cookies nos ayudan a entender cómo los visitantes interactúan con nuestro sitio web recopilando y reportando información de forma anónima. Esto nos ayuda a mejorar nuestro sitio web y servicios.</p>
+
+    <h3>Cookies de marketing</h3>
+    <p>Estas cookies se utilizan para rastrear a los visitantes a través de los sitios web. La intención es mostrar anuncios que sean relevantes y atractivos para cada usuario.</p>
+
+    <h2>Gestión de cookies</h2>
+    <p>Puede controlar y gestionar las cookies de varias maneras. Tenga en cuenta que eliminar o bloquear cookies puede afectar su experiencia de usuario y es posible que algunas funciones ya no estén disponibles.</p>
+    
+    <p>La mayoría de los navegadores aceptan cookies automáticamente, pero puede modificar la configuración de su navegador para rechazarlas si lo prefiere. Instrucciones para gestionar cookies en los navegadores más populares:</p>
+    <ul>
+      <li><strong>Chrome:</strong> Configuración > Privacidad y seguridad > Cookies y otros datos de sitios</li>
+      <li><strong>Firefox:</strong> Opciones > Privacidad y seguridad > Cookies y datos de sitios</li>
+      <li><strong>Safari:</strong> Preferencias > Privacidad > Cookies y datos de sitios web</li>
+      <li><strong>Edge:</strong> Configuración > Privacidad, búsqueda y servicios > Cookies y permisos de sitios</li>
+    </ul>
+
+    <h2>Cookies de terceros</h2>
+    <p>Además de nuestras propias cookies, también podemos utilizar varias cookies de terceros para informar estadísticas de uso del servicio y mostrar anuncios en y a través del servicio.</p>
+
+    <h2>Contáctenos</h2>
+    <p>Si tiene alguna pregunta sobre nuestro uso de cookies, por favor contáctenos en:</p>
+    <p><strong>Email:</strong> pablozunolg@gmail.com</p>
+    <p><strong>Teléfono:</strong> +34 613 190 883</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="footer" class="footer">
+  <div class="footer-inner">
+    <nav class="footer-nav">
+      <a href="cookies.html">Cookies</a>
+      <a href="privacy-policy.html">Política de Privacidad</a>
+      <a href="legal-warning.html">Aviso legal</a>
+      <a href="terms.html">Términos y condiciones</a>
+    </nav>
+
+    <div class="footer-meta">
+      <p>Desarrollado por: Mateusz Plizga</p>
+      <p>© 2026 GAGAGAZPACHO</p>
+      <p>pablozunolg@gmail.com / +34 613 190 883</p>
+      <div class="footer-socials">
+        <a href="https://www.instagram.com/gagazpacho_art/" aria-label="Instagram">
+          <img src="../images/icon-instagram.webp" alt="">
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=100076318996215" aria-label="Facebook">
+          <img src="../images/icon-facebook.webp" alt="">
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const cartCountEl = document.querySelector('.cart-count');
+  const nav = document.getElementById('main-nav');
+  const navToggle = document.querySelector('.nav-toggle');
+  const navBackdrop = document.getElementById('nav-backdrop');
+
+  const updateCartCount = () => {
+    try {
+      const savedCart = localStorage.getItem('cart');
+      const items = savedCart ? JSON.parse(savedCart) : [];
+      const total = items.reduce((sum, item) => sum + (item.quantity || 0), 0);
+      if (cartCountEl) {
+        cartCountEl.textContent = total;
+        cartCountEl.style.display = total > 0 ? 'inline-flex' : 'none';
+      }
+    } catch (e) {
+      if (cartCountEl) {
+        cartCountEl.textContent = '0';
+        cartCountEl.style.display = 'none';
+      }
+    }
+  };
+
+  updateCartCount();
+  window.addEventListener('storage', (e) => {
+    if (e.key === 'cart') updateCartCount();
+  });
+
+  const closeNav = () => {
+    if (!nav || !navToggle || !navBackdrop) return;
+    nav.classList.remove('is-open');
+    navBackdrop.classList.remove('is-visible');
+    navToggle.setAttribute('aria-expanded', 'false');
+    document.body.classList.remove('nav-locked');
+  };
+
+  const toggleNav = () => {
+    if (!nav || !navToggle || !navBackdrop) return;
+    const isOpen = nav.classList.toggle('is-open');
+    navBackdrop.classList.toggle('is-visible', isOpen);
+    navToggle.setAttribute('aria-expanded', String(isOpen));
+    document.body.classList.toggle('nav-locked', isOpen);
+  };
+
+  if (navToggle) {
+    navToggle.addEventListener('click', toggleNav);
+  }
+
+  if (navBackdrop) {
+    navBackdrop.addEventListener('click', closeNav);
+  }
+
+  if (nav) {
+    nav.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', closeNav);
+    });
+  }
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,281 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GAGAZPACHO</title>
+  <link rel="icon" type="image/webp" href="../images/logo2.webp">
+  <link rel="icon" type="image/webp" href="../images/logo2.webp">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./who.css">
+</head>
+
+<body>
+
+<!-- HEADER (copied from main.html, fully responsive) -->
+<header class="header">
+  <div class="container header-flex">
+    <nav class="nav" id="main-nav">
+      <div class="nav-links">
+        <a href="main.html" >INICIO</a>
+        <a href="http://localhost:3000">OBRAS RECIENTES</a>
+        <img src="../images/logo2.webp" alt="Logo GAGAZPACHO" class="center-logo">
+        <a href="who.html"class="active">QUIÉN</a>
+        <a href="http://localhost:3000/shop">TIENDA</a>
+        <a href="/cart" class="cart-link">CARRITO <span class="cart-count" aria-live="polite">0</span></a>
+      </div>
+    </nav>
+    <button class="nav-toggle" type="button" aria-controls="main-nav" aria-expanded="false" aria-label="Open menu">
+      <img src="../images/logo2.webp" alt="Menu">
+    </button>
+  </div>
+</header>
+<div class="nav-backdrop" id="nav-backdrop" aria-hidden="true"></div>
+<script>
+  const cartCountEl = document.querySelector('.cart-count');
+  const nav = document.getElementById('main-nav');
+  const navToggle = document.querySelector('.nav-toggle');
+  const navBackdrop = document.getElementById('nav-backdrop');
+
+  function updateCartCount() {
+    try {
+      const savedCart = localStorage.getItem('cart');
+      const items = savedCart ? JSON.parse(savedCart) : [];
+      const total = items.reduce((sum, item) => sum + (item.quantity || 0), 0);
+      if (cartCountEl) {
+        cartCountEl.textContent = total;
+        cartCountEl.style.display = total > 0 ? 'inline-flex' : 'none';
+      }
+    } catch (e) {
+      if (cartCountEl) {
+        cartCountEl.textContent = '0';
+        cartCountEl.style.display = 'none';
+      }
+    }
+  }
+
+  updateCartCount();
+  window.addEventListener('storage', (e) => {
+    if (e.key === 'cart') updateCartCount();
+  });
+
+  const closeNav = () => {
+    if (!nav || !navToggle || !navBackdrop) return;
+    nav.classList.remove('is-open');
+    navBackdrop.classList.remove('is-visible');
+    navToggle.setAttribute('aria-expanded', 'false');
+    document.body.classList.remove('nav-locked');
+  };
+
+  const toggleNav = () => {
+    if (!nav || !navToggle || !navBackdrop) return;
+    const isOpen = nav.classList.toggle('is-open');
+    navBackdrop.classList.toggle('is-visible', isOpen);
+    navToggle.setAttribute('aria-expanded', String(isOpen));
+    document.body.classList.toggle('nav-locked', isOpen);
+  };
+
+  if (navToggle) {
+    navToggle.addEventListener('click', toggleNav);
+  }
+
+  if (navBackdrop) {
+    navBackdrop.addEventListener('click', closeNav);
+  }
+
+  if (nav) {
+    nav.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', closeNav);
+    });
+  }
+</script>
+
+<!-- WHO INTRO -->
+ 
+    <section class="who-intro">
+      <h1>
+        Bienvenidos a lo que sea que es esto.<br>
+        Pinto y hago movidas y parece que a la gente le gusta.<br>
+      </h1>
+      <p class="wall-mark">
+      <span>Pablo Zúñiga Olgado</span>
+      </p>
+
+
+      <p class="tagline">
+        Arquitecto de formación, artista por vocación. Trabajo entre la ilustración, la pintura mural y el arte funcional.
+      </p>
+      <div class="paint-halo"></div>
+    </section>
+    <!-- WHO COLLAGE -->
+    <section class="who-collage">
+
+      <div class="who-text">
+        <p>
+          En 2019, después de acabar la carrera de arquitectura, me atreví por primera vez a ofrecer mis ilustraciones en un pequeño mercado de Lisboa, dónde vivía en aquel momento.
+          Desde entonces, no he parado de dibujar, pintar y crear cosas. He tenido muchos trabajos pero ninguno me ha llenado tanto como el de artista.
+          He creado ilustraciones y pintado murales para ayuntamientos y empresas, para marcas de ropa, proyectos editoriales y también particulares.
+          <br><br>
+          
+          
+          Bienvenidos a este rincón de internet dónde puedes encontrar algunos de los productos y servicios que ofrezco y, sobre todo, puedes conocerme un poco más y descubrir si lo que hago es para tí. En mi trabajo me gusta aportar color, alegría y un toque de surrealismo. Cuento historias que para mi son importantes. Me gusta crear piezas que tengan un impacto visual fuerte, que sean únicas y que transmitan emociones.
+          <div class=""></div>
+          
+
+        </p>
+
+        <p>
+          <br><br>
+          Si algo de esto resuena contigo, te invito a explorar mi trabajo y a ponerte en contacto conmigo para cualquier proyecto o colaboración.
+          Gracias por pasarte por aquí y espero que te diviertas! :)
+        </p>
+      </div>
+
+      <div class="who-photo">
+        <div class="who-image-frame" id="who-profile-frame">
+          <img
+            id="who-profile-image"
+            src="../images/2.webp"
+            alt="Artist portrait"
+          />
+        </div>
+      </div>
+
+    </section>
+
+    <!-- WHAT I DO (CHAOTIC) -->
+    <section class="who-do">
+
+      <div class="do-item illustration">
+        <img src="../images/0.SELECCIÓN WEB PRINTS/CAPITÁN PEZUÑAS/11.webp" alt="Capitán Pezuñas">
+        <h3>ILUSTRACIÓN</h3>
+        <p>
+          Ilustración tradicional y digital, con personajes alocados y colores vivos que transmiten el buen rollo que quieres en tu espacio.
+          Llevo 6 años creando ilustraciones para las colecciones de Sahil Aneja.
+          A través de esta colaboración mis diseños han aparecido en revistas como Vogue o GQ.
+        </p>
+      </div>
+
+      <div class="do-item mural">
+        <img src="../images/west 1 - copia.webp" alt="El Rapto">
+        <h3>MURALES</h3>
+        <p>
+          En el muralismo he encontrado una forma unir mi pasión por el arte y la mejora del espacio público.
+Una forma de combinar arte y arquitectura, de sacarlos a la calle y ponerlos al alcance de todos.
+          He pintado para ayuntamientos y empresas en varios lugares de Extremadura, en Girona y en la ciudad de Copenhague.
+        </p>
+      </div>
+
+      <div class="do-item object">
+        <img src="../images/prometeo.webp" alt="Prometeo">
+        <h3>ARTE FUNCIONAL</h3>
+        <p>
+          Arte que llevas puesto, te ilumina una estancia o te sirve para colgar la chaqueta cuando llegas a casa.
+          Pero todo esto, de una forma única.
+      </div>
+    </section>
+ 
+
+  
+<svg width="0" height="0" style="position:absolute">
+  <filter id="noise">
+    <!-- Soft grain -->
+    <feTurbulence
+      type="fractalNoise"
+      baseFrequency="0.85"
+      numOctaves="1"
+      seed="4"
+      result="noise">
+      <!-- extremely slow movement -->
+      <animate
+        attributeName="baseFrequency"
+        dur="18s"
+        values="0.84;0.86;0.84"
+        repeatCount="indefinite" />
+    </feTurbulence>
+
+    <!-- Very subtle displacement -->
+    <feDisplacementMap
+      in="SourceGraphic"
+      in2="noise"
+      scale="3"
+      xChannelSelector="R"
+      yChannelSelector="G"
+    />
+
+    <!-- Warm color grain -->
+    <feColorMatrix
+      type="matrix"
+      values="
+        1.08 0    0    0   0.04
+        0    1.05 0    0   0.02
+        0    0    1    0   0
+        0    0    0    0.9 0
+      "
+    />
+  </filter>
+</svg>
+
+
+
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+      <!-- LOGO -->
+
+      <!-- NAV -->
+      <nav class="footer-nav">
+        <a href="cookies.html">Cookies</a>
+        <a href="privacy-policy.html">Política de Privacidad</a>
+        <a href="legal-warning.html">Aviso legal</a>
+        <a href="terms.html">Términos y condiciones</a>
+      </nav>
+
+    
+
+      <!-- COPYRIGHT -->
+      <div class="footer-meta">
+        <p>Desarrollado por: Mateusz Plizga</p>
+        <p>© 2026 GAGAGAZPACHO</p>
+        <p>pablozunolg@gmail.com / +34 613 190 883</p>
+        <div class="footer-socials">
+        <a href="https://www.instagram.com/gagazpacho_art/" aria-label="Instagram">
+          <img src="../images/icon-instagram.webp" alt="">
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=100076318996215" aria-label="Facebook">
+          <img src="../images/icon-facebook.webp" alt="">
+        </a>
+        </div>
+      </div>
+</div>
+    
+   
+</footer>
+
+<script>
+  const stamp = document.querySelector('.stamp');
+  const header = document.querySelector('.header');
+
+  window.addEventListener('scroll', () => {
+    if (!stamp) return;
+
+    if (window.scrollY > 150) {
+      stamp.style.opacity = '1';
+      stamp.style.transform = 'rotate(12deg) scale(1)';
+    }
+  });
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) { // start transparency after 50px scroll
+      header?.classList.add('scrolled');
+    } else {
+      header?.classList.remove('scrolled');
+    }
+  });
+
+  // Removed duplicate cartCountEl and updateCartCount declarations
+</script>
+
+</body>
+</html>

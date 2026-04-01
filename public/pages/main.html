@@ -1,0 +1,575 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GAGAGAZPACHO</title>
+  <link rel="icon" type="image/webp" href="../images/logo2.webp">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<!-- CABECERA -->
+<header class="header">
+  <div class="container header-flex">
+    <nav class="nav" id="main-nav">
+      <div class="nav-links">
+        <a href="main.html" class="active">INICIO</a>
+        <a href="http://localhost:3000">OBRAS RECIENTES</a>
+        <img src="../images/logo2.webp" alt="Logo GAGAZPACHO" class="center-logo">
+        <a href="who.html">QUIÉN</a>
+        <a href="http://localhost:3000/shop">TIENDA</a>
+        <a href="/cart" class="cart-link">CARRITO <span class="cart-count" aria-live="polite">0</span></a>
+      </div>
+    </nav>
+    <button class="nav-toggle" type="button" aria-controls="main-nav" aria-expanded="false" aria-label="Abrir menú">
+      <img src="../images/logo2.webp" alt="Menú">
+    </button>
+  </div>
+</header>
+<div class="nav-backdrop" id="nav-backdrop" aria-hidden="true"></div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div> <!-- this is the side background -->
+  <div class="hero-image"></div> <!-- this is the actual picture -->
+  <div class="hero-content">
+    <img src="../images/gagazpacho3.webp" alt="Profile">
+    <h2>PABLO ZÚÑIGA OLGADO</h2>
+  </div>
+</section>
+
+
+<!-- THE LATEST -->
+<div class="fantasy-gradient">
+  <section id="latest" class="latest-section">
+  <div class="container">
+
+    <h2 class="section-title">Lo Último</h2>
+    <p class="section-subtitle">
+      Las creaciones más fresquitas recién salidas del horno.
+    </p>
+
+    <div class="latest-grid">
+
+      <!-- ROW 1 -->
+      <div class="latest-row" data-direction="right">
+        <div class="latest-row-track">
+          <div class="latest-row-set">
+            <a href="http://localhost:3000/shop/Yggdrasil" class="latest-card" data-slug="Yggdrasil">
+              <img src="../images/SHOP/10.Yggdrasil/1.webp" alt="Yggdrasil">
+              <div class="overlay">
+                <h3>Yggdrasil</h3>
+                <span class="price" data-slug="Yggdrasil">...</span>
+              </div>
+            </a>
+
+            <a href="http://localhost:3000/shop/frioypez" class="latest-card" data-slug="frioypez">
+              <img src="../images/SHOP/11.frío y pez/1.webp" alt="Frío y Pez">
+              <div class="overlay">
+                <h3>Frío y Pez</h3>
+                <span class="price" data-slug="frioypez">...</span>
+              </div>
+            </a>
+
+            <a href="http://localhost:3000/shop/CorazonSalvajeTSHIRT" class="latest-card" data-slug="CorazonSalvajeTSHIRT">
+              <img src="../images/SHOP/12.CorazonSalvajeTSHIRT/1.webp" alt="Corazon Salvaje T-Shirt">
+              <div class="overlay">
+                <h3>Corazon Salvaje Tee</h3>
+                <span class="price" data-slug="CorazonSalvajeTSHIRT">...</span>
+              </div>
+            </a>
+
+            <a href="http://localhost:3000/shop/Titiritero" class="latest-card" data-slug="Titiritero">
+              <img src="../images/SHOP/09.Titiritero/1.webp" alt="Titiritero">
+              <div class="overlay">
+                <h3>Titiritero</h3>
+                <span class="price" data-slug="Titiritero">...</span>
+              </div>
+            </a>
+
+            <a href="http://localhost:3000/shop/CorazonSalvaje" class="latest-card" data-slug="CorazonSalvaje">
+              <img src="../images/SHOP/08.CorazonSalvaje/1.webp" alt="Corazon Salvaje">
+              <div class="overlay">
+                <h3>Corazon Salvaje</h3>
+                <span class="price" data-slug="CorazonSalvaje">...</span>
+              </div>
+            </a>
+
+            <a href="http://localhost:3000/shop/ManoRoja" class="latest-card" data-slug="ManoRoja">
+              <img src="../images/SHOP/07.ManoRoja/1.webp" alt="Mano Roja">
+              <div class="overlay">
+                <h3>Mano Roja</h3>
+                <span class="price" data-slug="ManoRoja">...</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="latest-row-set" aria-hidden="true">
+            <a href="http://localhost:3000/shop/Yggdrasil" class="latest-card" data-slug="Yggdrasil" aria-hidden="true">
+              <img src="../images/SHOP/10.Yggdrasil/1.webp" alt="Yggdrasil">
+              <div class="overlay">
+                <h3>Yggdrasil</h3>
+                <span class="price" data-slug="Yggdrasil">...</span>
+              </div>
+            </a>
+
+            <a href="http://localhost:3000/shop/frioypez" class="latest-card" data-slug="frioypez" aria-hidden="true">
+              <img src="../images/SHOP/11.frío y pez/1.webp" alt="Frío y Pez">
+              <div class="overlay">
+                <h3>Frío y Pez</h3>
+                <span class="price" data-slug="frioypez">...</span>
+              </div>
+            </a>
+
+            <a href="http://localhost:3000/shop/CorazonSalvajeTSHIRT" class="latest-card" data-slug="CorazonSalvajeTSHIRT" aria-hidden="true">
+              <img src="../images/SHOP/12.CorazonSalvajeTSHIRT/1.webp" alt="Corazon Salvaje T-Shirt">
+              <div class="overlay">
+                <h3>Corazon Salvaje Tee</h3>
+                <span class="price" data-slug="CorazonSalvajeTSHIRT">...</span>
+              </div>
+            </a>
+
+            <a href="http://localhost:3000/shop/Titiritero" class="latest-card" data-slug="Titiritero" aria-hidden="true">
+              <img src="../images/SHOP/09.Titiritero/1.webp" alt="Titiritero">
+              <div class="overlay">
+                <h3>Titiritero</h3>
+                <span class="price" data-slug="Titiritero">...</span>
+              </div>
+            </a>
+
+            <a href="http://localhost:3000/shop/CorazonSalvaje" class="latest-card" data-slug="CorazonSalvaje" aria-hidden="true">
+              <img src="../images/SHOP/08.CorazonSalvaje/1.webp" alt="Corazon Salvaje">
+              <div class="overlay">
+                <h3>Corazon Salvaje</h3>
+                <span class="price" data-slug="CorazonSalvaje">...</span>
+              </div>
+            </a>
+
+            <a href="http://localhost:3000/shop/ManoRoja" class="latest-card" data-slug="ManoRoja" aria-hidden="true">
+              <img src="../images/SHOP/07.ManoRoja/1.webp" alt="Mano Roja">
+              <div class="overlay">
+                <h3>Mano Roja</h3>
+                <span class="price" data-slug="ManoRoja">...</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      </div>
+
+    <div class="see-more-container">
+      <a href="http://localhost:3000/shop" class="btn see-more-btn">VER MÁS</a>
+    </div>
+
+  </div>
+</section>
+
+
+  </div>
+  </section>
+
+<script>
+    // Dynamically set prices for latest-row cards from Next.js API
+    (function setLatestRowPrices() {
+      fetch('http://localhost:3000/api/products')
+        .then(function(response) { return response.json(); })
+        .then(function(data) {
+          const priceMap = {};
+          data.forEach(function(item) {
+            priceMap[item.slug] = item.price;
+          });
+          document.querySelectorAll('.latest-row-set .price[data-slug]').forEach(function(span) {
+            const slug = span.getAttribute('data-slug');
+            if (priceMap[slug] !== undefined) {
+              span.textContent = `€${priceMap[slug].toFixed(2)}`;
+            } else {
+              span.textContent = 'N/A';
+            }
+          });
+        })
+        .catch(function() {
+          document.querySelectorAll('.latest-row-set .price[data-slug]').forEach(function(span) {
+            span.textContent = 'N/A';
+          });
+        });
+    })();
+  const cartCountEl = document.querySelector('.cart-count');
+  const nav = document.getElementById('main-nav');
+  const navToggle = document.querySelector('.nav-toggle');
+  const navBackdrop = document.getElementById('nav-backdrop');
+
+  const updateCartCount = () => {
+    try {
+      const savedCart = localStorage.getItem('cart');
+      const items = savedCart ? JSON.parse(savedCart) : [];
+      const total = items.reduce((sum, item) => sum + (item.quantity || 0), 0);
+      if (cartCountEl) {
+        cartCountEl.textContent = total;
+        cartCountEl.style.display = total > 0 ? 'inline-flex' : 'none';
+      }
+    } catch (e) {
+      if (cartCountEl) {
+        cartCountEl.textContent = '0';
+        cartCountEl.style.display = 'none';
+      }
+    }
+  };
+
+  updateCartCount();
+  window.addEventListener('storage', (e) => {
+    if (e.key === 'cart') updateCartCount();
+  });
+
+  const closeNav = () => {
+    if (!nav || !navToggle || !navBackdrop) return;
+    nav.classList.remove('is-open');
+    navBackdrop.classList.remove('is-visible');
+    navToggle.setAttribute('aria-expanded', 'false');
+    document.body.classList.remove('nav-locked');
+  };
+
+  const toggleNav = () => {
+    if (!nav || !navToggle || !navBackdrop) return;
+    const isOpen = nav.classList.toggle('is-open');
+    navBackdrop.classList.toggle('is-visible', isOpen);
+    navToggle.setAttribute('aria-expanded', String(isOpen));
+    document.body.classList.toggle('nav-locked', isOpen);
+  };
+
+  if (navToggle) {
+    navToggle.addEventListener('click', toggleNav);
+  }
+
+  if (navBackdrop) {
+    navBackdrop.addEventListener('click', closeNav);
+  }
+
+  if (nav) {
+    nav.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', closeNav);
+    });
+  }
+</script>
+
+<!-- FLEX SECTIONS: COMMISSION + WHAT WE DO -->
+
+  <section class="flex-section commission-section">
+    <div class="flex-content">
+    <div class="flex-text">
+      <h2>Trabajos por encargo</h2>
+      <p>¿Tienes un proyecto genial o una idea atrevida?
+      <p>¡Hagámoslo realidad juntos!</p>
+      <a href="#footer" class="btn btn-dark">Contáctanos</a>
+    </div>
+
+    <div class="flex-image">
+      <img src="../images/tormenta.webp" alt="tormenta">
+    </div>
+  </div>
+  </section>
+
+  <section class="flex-section what-we-do-section">
+    <div class="flex-content reverse">
+      <div class="flex-image">
+        <img src="../images/10. TITIRITERO.webp" alt="What we do">
+      </div>
+      <div class="flex-text">
+        <h2>¿QUÉ HACEMOS?</h2>
+        <p class="lead">Piezas genuinas para personas únicas.</p>
+        <p>Muralismo, ilustración y objetos decorativos únicos.</p>
+        <p>Ediciones limitadas, originales y productos genuinos que no encontrarás en ningún otro lugar.</p>
+        <a href="http://localhost:3000/shop" class="btn btn-light">VER PRODUCTOS</a>
+      </div>
+    </div>
+  </section>
+ 
+  <section class="flex-section manifesto-section">
+    
+  <div class="manifesto-inner">
+
+    <h2>Podemos hacerlo mejor.</h2>
+
+    <p>
+      En este proyecto buscamos ofrecer una forma alternativa de consumo,
+      más ética y sostenible. Creemos que debe haber una mejor manera de
+      producir y consumir.
+    </p>
+
+    <p>
+      Por eso seleccionamos cuidadosamente a nuestros socios y solo trabajamos con materiales
+      orgánicos y reciclados producidos de manera ética y sostenible,
+      protegiendo el planeta y a quienes lo habitan.
+    </p>
+    <div class="manifesto-logos">
+      <img src="../images/vegan2.webp" alt="Organic materials">
+      <img src="../images/fairwear.webp" alt="Recycled materials">
+      <img src="../images/organic.webp" alt="Ethical production">
+    </div>
+
+
+    <a href="who.html" class="btn see-more-btn">QUIÉNES SOMOS</a>
+
+  </div>
+    
+  </section>
+
+
+
+ <!-- STORE / RECENT WORKS -->
+  <section class="recent-works">
+  <div class="recent-header">
+    <h2>OBRAS RECIENTES</h2>
+  </div>
+
+  <div class="recent-grid">
+    <!-- Items injected by script -->
+  </div>
+
+  <div class="recent-cta">
+    <a href="http://localhost:3000" class="btn btn-light">VER MÁS</a>
+  </div>
+  </section>
+
+
+  <section class="contact-section">
+    <div class="contact-bg"></div>
+    <div class="contact-image"></div>
+    <div class="contact-content">
+      <!-- Success/Error Message -->
+      <div id="formMessage" class="form-message" style="display: none;"></div>
+
+      <h2>Contacto</h2>
+      <p>Envíanos un mensaje y te responderemos lo antes posible.</p>
+
+      <form id="contactForm">
+        <input type="text" name="name" placeholder="Tu Nombre" required>
+        <input type="email" name="email" placeholder="Tu Correo Electrónico" required>
+        <textarea name="message" rows="4" placeholder="Tu Mensaje" required></textarea>
+        <button type="submit" class="btn btn-gradient" id="submitBtn">Enviar Mensaje</button>
+      </form>
+    </div>
+  </section>
+
+  
+
+
+
+
+
+<!-- FOOTER -->
+<!-- FOOTER -->
+  <footer id="footer" class="footer">
+    <div class="footer-inner">
+
+      <!-- LOGO -->
+
+      <!-- NAV -->
+      <nav class="footer-nav">
+        <a href="cookies.html">Cookies</a>
+        <a href="privacy-policy.html">Política de Privacidad</a>
+        <a href="legal-warning.html">Aviso legal</a>
+        <a href="terms.html">Términos y condiciones</a>
+      </nav>
+
+    
+
+      <!-- COPYRIGHT -->
+      <div class="footer-meta">
+        <p>Desarrollado por: Mateusz Plizga</p>
+        <p>© 2026 GAGAGAZPACHO</p>
+        <p>pablozunolg@gmail.com / +34 613 190 883</p>
+        <div class="footer-socials">
+        <a href="https://www.instagram.com/gagazpacho_art/" aria-label="Instagram">
+          <img src="../images/icon-instagram.webp" alt="">
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=100076318996215" aria-label="Facebook">
+          <img src="../images/icon-facebook.webp" alt="">
+        </a>
+        </div>
+      </div>
+</div>
+    
+   
+</footer>
+
+
+<!-- COOKIE CONSENT BANNER -->
+<div id="cookieBanner" class="cookie-banner">
+  <div class="cookie-content">
+    <div class="cookie-text">
+      <h3>Cookies y Privacidad</h3>
+      <p>Utilizamos cookies para mejorar su experiencia de navegación.</p>
+      <p>Puede aceptar todas o rechazar las cookies no esenciales.</p>
+    </div>
+    <div class="cookie-buttons">
+      <button id="rejectCookies" class="cookie-btn cookie-reject">Rechazar</button>
+      <button id="acceptCookies" class="cookie-btn cookie-accept">Aceptar todo</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  const header = document.querySelector('.header');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) { // start transparency after 50px scroll
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
+
+  // COOKIE CONSENT LOGIC
+  const cookieBanner = document.getElementById('cookieBanner');
+  const acceptBtn = document.getElementById('acceptCookies');
+  const rejectBtn = document.getElementById('rejectCookies');
+
+  const checkCookieConsent = () => {
+    const consent = localStorage.getItem('cookieConsent');
+    if (consent) {
+      cookieBanner.style.display = 'none';
+    } else {
+      cookieBanner.style.display = 'flex';
+      setTimeout(() => {
+        cookieBanner.classList.add('show');
+      }, 500);
+    }
+  };
+
+  acceptBtn.addEventListener('click', () => {
+    localStorage.setItem('cookieConsent', 'accepted');
+    // Here you would load analytics scripts, etc.
+    closeBanner();
+  });
+
+  rejectBtn.addEventListener('click', () => {
+    localStorage.setItem('cookieConsent', 'rejected');
+    closeBanner();
+  });
+
+  const closeBanner = () => {
+    cookieBanner.classList.remove('show');
+    setTimeout(() => {
+      cookieBanner.style.display = 'none';
+    }, 300);
+  };
+
+  // Check consent on load
+  checkCookieConsent();
+
+  // CONTACT FORM HANDLING
+  const contactForm = document.getElementById('contactForm');
+  const formMessage = document.getElementById('formMessage');
+  const submitBtn = document.getElementById('submitBtn');
+
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    // Get form data
+    const formData = new FormData(contactForm);
+    const data = {
+      name: formData.get('name'),
+      email: formData.get('email'),
+      message: formData.get('message')
+    };
+
+    // Disable button and show loading
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Enviando...';
+
+    try {
+      const response = await fetch('http://localhost:3000/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        // Success message
+        formMessage.textContent = result.message || '¡Mensaje enviado con éxito!';
+        formMessage.className = 'form-message form-success';
+        formMessage.style.display = 'block';
+        
+        // Reset form
+        contactForm.reset();
+        
+        // Ocultar mensaje después de 5 segundos
+        setTimeout(() => {
+          formMessage.style.display = 'none';
+        }, 5000);
+      } else {
+        // Mensaje de error
+        formMessage.textContent = result.error || 'No se pudo enviar el mensaje';
+        formMessage.className = 'form-message form-error';
+        formMessage.style.display = 'block';
+      }
+    } catch (error) {
+      formMessage.textContent = 'Error de red. Por favor, inténtelo de nuevo.';
+      formMessage.className = 'form-message form-error';
+      formMessage.style.display = 'block';
+    } finally {
+      // Re-enable button
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Enviar Mensaje';
+    }
+  });
+</script>
+
+<script>
+  // Recent Works - render 4 random unique artworks
+  (function renderRecentWorks() {
+    const artworks = [
+      { slug: 'art-1', src: '/images/GRAFFITIS/abrazobrockhampton/1.webp', alt: 'abrazobrockhampton' },
+      { slug: 'art-2', src: '/images/GRAFFITIS/bananna/1.webp', alt: 'bananna' },
+      { slug: 'art-3', src: '/images/GRAFFITIS/Candy Monster/1.webp', alt: 'Candy Monster' },
+      { slug: 'art-4', src: '/images/Lamparas y objetos/prometeo 1/1.webp', alt: 'Lámpara Prometeo' },
+      { slug: 'art-5', src: '/images/GRAFFITIS/Dao Beach/1.webp', alt: 'Dao Beach' },
+      { slug: 'art-6', src: '/images/GRAFFITIS/El David y los perros/1.webp', alt: 'El David y los perros' },
+      { slug: 'art-7', src: '/images/GRAFFITIS/El rapto/1.webp', alt: 'El rapto' },
+      { slug: 'art-8', src: '/images/GRAFFITIS/kemando billete/1.webp', alt: 'kemando billete' },
+      { slug: 'art-9', src: '/images/GRAFFITIS/La fiesta Monart/1.webp', alt: 'La fiesta Monart' },
+      { slug: 'art-10', src: '/images/GRAFFITIS/La Plaza/1.webp', alt: 'La Plaza' },
+      { slug: 'art-11', src: '/images/GRAFFITIS/las cabezas/1.webp', alt: 'las cabezas' },
+      { slug: 'art-12', src: '/images/GRAFFITIS/Mapa/1.webp', alt: 'Mapa' },
+      { slug: 'art-13', src: '/images/GRAFFITIS/mimo/1.webp', alt: 'mimo' },
+      { slug: 'art-14', src: '/images/GRAFFITIS/Nadie/1.webp', alt: 'Nadie' },
+      { slug: 'art-15', src: '/images/GRAFFITIS/Titiritero/1.webp', alt: 'Titiritero' },
+      { slug: 'art-16', src: '/images/GRAFFITIS/Tristán Otto/1.webp', alt: 'Tristán Otto' },
+      { slug: 'art-17', src: '/images/GRAFFITIS/westend/1.webp', alt: 'westend' },
+      { slug: 'art-18', src: '/images/GRAFFITIS/Yggdrasil/1.webp', alt: 'Yggdrasil' },
+      { slug: 'art-19', src: '/images/Lamparas y objetos/Las Pistas/1.webp', alt: 'Las Pistas' }, 
+    ];
+
+    const recentGrid = document.querySelector('.recent-grid');
+    if (!recentGrid) return;
+
+    const shuffled = [...artworks].sort(() => Math.random() - 0.5);
+    const selected = shuffled.slice(0, 4);
+
+    recentGrid.innerHTML = selected
+      .map(
+        (art) => `
+          <a href="http://localhost:3000/projects/${art.slug}" class="recent-item">
+            <img src="${art.src}" alt="${art.alt}">
+            <div class="overlay"><span>${art.alt}</span></div>
+          </a>
+        `
+      )
+      .join('');
+  })();
+</script>
+
+
+
+</body>
+</html>
+
+
+
+
